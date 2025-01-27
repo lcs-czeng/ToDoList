@@ -8,14 +8,64 @@
 import SwiftUI
 
 struct LandingView: View {
+    
+    // MARK: Stored properties
+    
+    // The item currently being added
+    @State var newItemDescription: String = ""
+    
+    // The search text
+    @State var searchText = ""
+    
+    // MARK: Computed properties
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationView {
+            
+            VStack {
+                
+                List {
+                    HStack {
+                        Image(systemName: "circle")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.blue)
+                        Text("Study for Chemistry quiz")
+                    }
+                    
+                    HStack {
+                        Image(systemName: "checkmark.circle")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.blue)
+                        Text("Finish Computer Science assignment")
+                    }
+                    
+                    HStack {
+                        Image(systemName: "circle")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.blue)
+                        Text("Go for a run around campus")
+                    }
+                }
+                .searchable(text: $searchText)
+                
+                HStack {
+                    TextField("Enter a to-do item", text: $newItemDescription)
+                    Button {
+                        //Add to dynamic array
+                    } label: {
+                        Text("ADD")
+                    }
+                    
+                }
+                .padding(20)
+                
+            }
+            .navigationTitle("To Do List")
+            
         }
-        .padding()
     }
 }
 

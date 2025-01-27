@@ -64,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				16CBEC122D47CC3D000C7B36 /* ToDoListApp.swift */,
-				16CBEC1E2D47CD2A000C7B36 /* Helper */,
 				16CBEC1B2D47CCB1000C7B36 /* Model */,
 				16CBEC182D47CC99000C7B36 /* Views */,
 				16CBEC102D47CC3D000C7B36 /* Assets.xcassets */,
@@ -88,13 +87,6 @@
 				16CBEC1C2D47CD0F000C7B36 /* ToDoItem.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		16CBEC1E2D47CD2A000C7B36 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
