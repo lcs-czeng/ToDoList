@@ -10,7 +10,7 @@ import SwiftUI
 struct LandingView: View {
     
     // MARK: Stored properties
-    
+        
     // The item currently being added
     @State var newItemDescription: String = ""
     
@@ -25,36 +25,16 @@ struct LandingView: View {
             VStack {
                 
                 List {
-                    HStack {
-                        Image(systemName: "circle")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(.blue)
-                        Text("Study for Chemistry quiz")
-                    }
-                    
-                    HStack {
-                        Image(systemName: "checkmark.circle")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(.blue)
-                        Text("Finish Computer Science assignment")
-                    }
-                    
-                    HStack {
-                        Image(systemName: "circle")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(.blue)
-                        Text("Go for a run around campus")
-                    }
+                    ItemView(itemToDo: Chemistry)
+                    ItemView(itemToDo: CompSci)
+                    ItemView(itemToDo: Run)
                 }
                 .searchable(text: $searchText)
                 
                 HStack {
                     TextField("Enter a to-do item", text: $newItemDescription)
                     Button {
-                        //Add to dynamic array
+                        //Add to a dynamic array
                     } label: {
                         Text("ADD")
                     }

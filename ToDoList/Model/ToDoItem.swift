@@ -18,3 +18,5 @@ let Chemistry = ToDoItem(itemName: "Study for Chemistry quiz", itemStatus: "circ
 let CompSci = ToDoItem(itemName: "Finish Computer Science assignment", itemStatus: "checkmark.circle")
 
 let Run = ToDoItem(itemName: "Go for a run around campus", itemStatus: "circle")
+
+let items  = [Chemistry, CompSci, Run]

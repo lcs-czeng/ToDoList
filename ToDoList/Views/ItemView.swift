@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ItemView: View {
+    
+    let itemToDo: ToDoItem
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        HStack {
+            Image(systemName:itemToDo.itemStatus)
+                .resizable()
+                .frame(width: 24, height: 24)
+                .foregroundColor(.blue)
+            Text(itemToDo.itemName)
+        }
     }
 }
 
 #Preview {
-    ItemView()
+    ItemView(itemToDo: Chemistry)
 }
