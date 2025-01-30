@@ -13,16 +13,18 @@ struct ItemView: View {
     
     var body: some View {
         
-        HStack {
-            Image(systemName:itemToDo.itemStatus)
-                .resizable()
-                .frame(width: 24, height: 24)
-                .foregroundColor(.blue)
-            Text(itemToDo.itemName)
-        }
+        Label(
+            title: {
+                Text(itemToDo.itemName)
+            },icon: {
+                Image(systemName: itemToDo.itemStatus)
+            }
+        )
     }
 }
 
+
+
 #Preview {
-    ItemView(itemToDo: Chemistry)
+    ItemView(itemToDo: CompSci)
 }
