@@ -9,14 +9,14 @@ import Foundation
 
 struct ToDoItem: Identifiable {
     let id = UUID()
-    let itemName: String
-    let itemStatus: String
+    var title: String
+    var done: Bool
 }
 
-let Chemistry = ToDoItem(itemName: "Study for Chemistry quiz", itemStatus: "circle")
+let Chemistry = ToDoItem(title: "Study for Chemistry quiz", done: false)
 
-let CompSci = ToDoItem(itemName: "Finish Computer Science assignment", itemStatus: "checkmark.circle")
+let CompSci = ToDoItem(title: "Finish Computer Science assignment", done: true)
 
-let Run = ToDoItem(itemName: "Go for a run around campus", itemStatus: "circle")
+let Run = ToDoItem(title: "Go for a run around campus", done: false)
 
 let items  = [Chemistry, CompSci, Run]
