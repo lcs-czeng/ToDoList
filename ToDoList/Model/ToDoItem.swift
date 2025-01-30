@@ -13,10 +13,14 @@ struct ToDoItem: Identifiable {
     var done: Bool
 }
 
-let Chemistry = ToDoItem(title: "Study for Chemistry quiz", done: false)
+let firstItem = ToDoItem(title: "Study for Chemistry quiz", done: false)
 
-let CompSci = ToDoItem(title: "Finish Computer Science assignment", done: true)
+let secondItem = ToDoItem(title: "Finish Computer Science assignment", done: true)
 
-let Run = ToDoItem(title: "Go for a run around campus", done: false)
+let thirdItem = ToDoItem(title: "Go for a run around campus", done: false)
 
-let items  = [Chemistry, CompSci, Run]
+let items  = [
+    firstItem,
+    secondItem,
+    thirdItem
+]
