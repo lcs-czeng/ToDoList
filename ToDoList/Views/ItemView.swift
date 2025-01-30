@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ItemView: View {
-        
+
     let title: String
     
     let done: Bool
@@ -19,7 +19,11 @@ struct ItemView: View {
             title: {
                 Text(title)
             },icon: {
-                Image(systemName: "circle")
+                if done == true {
+                    Image(systemName: "checkmark.circle")
+                } else {
+                    Image(systemName: "circle")
+                }
             }
         )
     }
