@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ItemView: View {
+        
+    let title: String
     
-    let itemToDo: ToDoItem
+    let done: Bool
     
     var body: some View {
         
         Label(
             title: {
-                Text(itemToDo.itemName)
+                Text(title)
             },icon: {
-                Image(systemName: itemToDo.itemStatus)
+                Image(systemName: "circle")
             }
         )
     }
@@ -26,5 +28,5 @@ struct ItemView: View {
 
 
 #Preview {
-    ItemView(itemToDo: CompSci)
+    ItemView(title: "Go for a run around campus", done: false)
 }
