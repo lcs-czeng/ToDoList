@@ -40,8 +40,6 @@ struct LandingView: View {
                                 }
                             )
                         }
-                    
-                    
                 }
                 .searchable(text: $searchText)
                 .navigationTitle("To Do List")
