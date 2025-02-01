@@ -72,6 +72,9 @@ struct LandingView: View {
         // Use the model context to insert the new to-do
         modelContext.insert(todo)
         
+        // Reset textfield after add new to-do item
+        newItemDescription = ""
+        
     }
     
     func removeRows(at offsets: IndexSet) {
