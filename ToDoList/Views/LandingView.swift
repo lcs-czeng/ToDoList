@@ -19,7 +19,7 @@ struct LandingView: View {
     @State var searchText = ""
     
     // The list of the to-do items
-    @State var todos: [ToDoItem] = items
+    @Query var todos: [ToDoItem]
     
     // Access model context
     @Environment(\.modelContext) var modelContext
@@ -32,20 +32,15 @@ struct LandingView: View {
             
             VStack {
                 
-                List($todos) { $todo in
-                    ItemView(currentItem: $todo)
-                    
-                    // Delete a to-do item
-                        .swipeActions {
-                            Button(
-                                "Delete",
-                                role: .destructive,
-                                action: {
-                                    delete(todo)
-                                }
-                            )
-                        }
+                List {
+                    ForEach(todos) { todo in
+                        
+                        ItemView(currentItem: todo)
+                 
+                    }
+                    .onDelete(perform: removeRows)
                 }
+                .searchable(text: $searchText)
                 .searchable(text: $searchText)
                 .navigationTitle("To Do List")
                 
@@ -59,6 +54,9 @@ struct LandingView: View {
                 .padding(20)
                 
             }
+            .onAppear {
+                printCommandToOpenDatabaseFile()
+            }
         }
     }
     
@@ -71,16 +69,20 @@ struct LandingView: View {
             done: false
         )
         
-        // Add to the array
-        todos.append(todo)
+        // Use the model context to insert the new to-do
+        modelContext.insert(todo)
         
     }
     
-    func delete(_ todo: ToDoItem) {
+    func removeRows(at offsets: IndexSet) {
         
-        // Delete existing to-do items
-        todos.removeAll { currentItem in
-            currentItem.id == todo.id
+        // Accept the offset within the list
+        // (the position of the item being deleted)
+        //
+        // Then ask the model context to delete this
+        // for us, from the 'todos' array
+        for offset in offsets {
+            modelContext.delete(todos[offset])
         }
     }
 }

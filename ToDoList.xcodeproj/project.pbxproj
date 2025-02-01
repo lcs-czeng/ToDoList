@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16B13DA32D4DC4B0007FC73D /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13DA22D4DC4A2007FC73D /* Functions.swift */; };
 		16CBEC142D47CC3D000C7B36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CBEC0E2D47CC3D000C7B36 /* Preview Assets.xcassets */; };
 		16CBEC152D47CC3D000C7B36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CBEC102D47CC3D000C7B36 /* Assets.xcassets */; };
 		16CBEC162D47CC3D000C7B36 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CBEC112D47CC3D000C7B36 /* LandingView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16B13DA22D4DC4A2007FC73D /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		16CBEBFD2D47CC13000C7B36 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CBEC0E2D47CC3D000C7B36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16CBEC102D47CC3D000C7B36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16B13DA12D4DC499007FC73D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				16B13DA22D4DC4A2007FC73D /* Functions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		16CBEBF42D47CC13000C7B36 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 				16CBEC122D47CC3D000C7B36 /* ToDoListApp.swift */,
 				16CBEC1B2D47CCB1000C7B36 /* Model */,
 				16CBEC182D47CC99000C7B36 /* Views */,
+				16B13DA12D4DC499007FC73D /* Helpers */,
 				16CBEC102D47CC3D000C7B36 /* Assets.xcassets */,
 				16CBEC0F2D47CC3D000C7B36 /* Preview Content */,
 			);
@@ -165,6 +176,7 @@
 				16CBEC162D47CC3D000C7B36 /* LandingView.swift in Sources */,
 				16CBEC1A2D47CCA8000C7B36 /* ItemView.swift in Sources */,
 				16CBEC1D2D47CD0F000C7B36 /* ToDoItem.swift in Sources */,
+				16B13DA32D4DC4B0007FC73D /* Functions.swift in Sources */,
 				16CBEC172D47CC3D000C7B36 /* ToDoListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
