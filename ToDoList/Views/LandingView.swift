@@ -19,7 +19,7 @@ struct LandingView: View {
     @State var searchText = ""
     
     // The list of the to-do items
-    @Query var todos: [ToDoItem]
+    @Query var todos: [TodoItem]
     
     // Access model context
     @Environment(\.modelContext) var modelContext
@@ -64,7 +64,7 @@ struct LandingView: View {
     func createToDo(withTitle title: String) {
         
         // Create the new to-do item instances
-        let todo = ToDoItem(
+        let todo = TodoItem(
             title: title,
             done: false
         )
@@ -90,6 +90,7 @@ struct LandingView: View {
     }
 }
 
-//#Preview {
-//    LandingView()
-//}
+#Preview {
+    LandingView()
+        .modelContainer(TodoItem.preview)
+}
